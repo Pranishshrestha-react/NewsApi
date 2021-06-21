@@ -1,17 +1,14 @@
-import React from 'react';
-import {Provider as PaperProvider} from 'react-native-paper';
-import {View, Text} from 'react-native';
-import MainNavigator from './navigations/MainNavigator';
-import NewsProvider from './store/providers/NewsProvider';
+import React, {Component} from 'react';
 
-const App = () =>  {
-  return(
-    <NewsProvider>
-      <PaperProvider>
-        <MainNavigator/>
-      </PaperProvider>  
-    </NewsProvider>
-  )
+
+import TabScreen from './Screens/tabScreen';
+
+export default class App extends Component {
+  render() {
+    return (
+      <TabScreen/>
+    );
+  }
 }
 
-export default App;
+
